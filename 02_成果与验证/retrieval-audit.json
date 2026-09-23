@@ -1,0 +1,148 @@
+{
+  "source": "evals/runs/project_v1_1_hybrid_coverage/run.json",
+  "source_sha256": "456e7cbd2c23c98115639f0808b1767b6fe9ac181a9a4fdb6811a3f216a1e8e4",
+  "scope": "Per-case counts from stored multi-span coverage annotations; no query, source text or model answer.",
+  "aggregation": "Mean of per-answerable-case recall; Precision@1 is mean of first-result relevance.",
+  "cases": [
+    {
+      "row": 1,
+      "answerable": true,
+      "gold_evidence_count": 1,
+      "covered_evidence_at_10": 1,
+      "first_result_relevant": true
+    },
+    {
+      "row": 2,
+      "answerable": true,
+      "gold_evidence_count": 1,
+      "covered_evidence_at_10": 1,
+      "first_result_relevant": true
+    },
+    {
+      "row": 3,
+      "answerable": true,
+      "gold_evidence_count": 1,
+      "covered_evidence_at_10": 1,
+      "first_result_relevant": false
+    },
+    {
+      "row": 4,
+      "answerable": true,
+      "gold_evidence_count": 1,
+      "covered_evidence_at_10": 1,
+      "first_result_relevant": true
+    },
+    {
+      "row": 5,
+      "answerable": true,
+      "gold_evidence_count": 1,
+      "covered_evidence_at_10": 1,
+      "first_result_relevant": true
+    },
+    {
+      "row": 6,
+      "answerable": true,
+      "gold_evidence_count": 1,
+      "covered_evidence_at_10": 1,
+      "first_result_relevant": true
+    },
+    {
+      "row": 7,
+      "answerable": true,
+      "gold_evidence_count": 1,
+      "covered_evidence_at_10": 1,
+      "first_result_relevant": true
+    },
+    {
+      "row": 8,
+      "answerable": true,
+      "gold_evidence_count": 1,
+      "covered_evidence_at_10": 1,
+      "first_result_relevant": true
+    },
+    {
+      "row": 9,
+      "answerable": true,
+      "gold_evidence_count": 2,
+      "covered_evidence_at_10": 2,
+      "first_result_relevant": true
+    },
+    {
+      "row": 10,
+      "answerable": true,
+      "gold_evidence_count": 2,
+      "covered_evidence_at_10": 2,
+      "first_result_relevant": true
+    },
+    {
+      "row": 11,
+      "answerable": true,
+      "gold_evidence_count": 3,
+      "covered_evidence_at_10": 3,
+      "first_result_relevant": true
+    },
+    {
+      "row": 12,
+      "answerable": true,
+      "gold_evidence_count": 3,
+      "covered_evidence_at_10": 3,
+      "first_result_relevant": false
+    },
+    {
+      "row": 13,
+      "answerable": true,
+      "gold_evidence_count": 2,
+      "covered_evidence_at_10": 2,
+      "first_result_relevant": false
+    },
+    {
+      "row": 14,
+      "answerable": true,
+      "gold_evidence_count": 4,
+      "covered_evidence_at_10": 3,
+      "first_result_relevant": true
+    },
+    {
+      "row": 15,
+      "answerable": true,
+      "gold_evidence_count": 4,
+      "covered_evidence_at_10": 4,
+      "first_result_relevant": false
+    },
+    {
+      "row": 16,
+      "answerable": true,
+      "gold_evidence_count": 3,
+      "covered_evidence_at_10": 3,
+      "first_result_relevant": true
+    },
+    {
+      "row": 17,
+      "answerable": true,
+      "gold_evidence_count": 2,
+      "covered_evidence_at_10": 2,
+      "first_result_relevant": true
+    },
+    {
+      "row": 18,
+      "answerable": true,
+      "gold_evidence_count": 3,
+      "covered_evidence_at_10": 3,
+      "first_result_relevant": false
+    },
+    {
+      "row": 19,
+      "answerable": false,
+      "gold_evidence_count": 0,
+      "covered_evidence_at_10": 0,
+      "first_result_relevant": false
+    },
+    {
+      "row": 20,
+      "answerable": false,
+      "gold_evidence_count": 0,
+      "covered_evidence_at_10": 0,
+      "first_result_relevant": false
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "source_root_label": "行业研究智能体_整理版/project",
+  "files": [
+    {
+      "source": "backend/app/service/action_gate.py",
+      "delivery": "03_核心代码/backend/app/service/action_gate.py",
+      "sha256": "5450dc6f33db6178c814dab0bc532c6c0d2fff4b10c89a3eb5fec227ece7f529",
+      "bytes": 2919
+    },
+    {
+      "source": "backend/app/service/fast_research.py",
+      "delivery": "03_核心代码/backend/app/service/fast_research.py",
+      "sha256": "adac1a77e463b7e8480f144bff5bc6bdedc92ea3e373294feb815d35cadc363a",
+      "bytes": 42902
+    },
+    {
+      "source": "backend/app/service/react_controller.py",
+      "delivery": "03_核心代码/backend/app/service/react_controller.py",
+      "sha256": "8e1d4b20ba6d48b4afcfea1bf0870b35fa7e972b0a2057bc1f093dec7b08f49c",
+      "bytes": 52210
+    },
+    {
+      "source": "backend/app/service/tool_executor.py",
+      "delivery": "03_核心代码/backend/app/service/tool_executor.py",
+      "sha256": "b46f2d4ee0a689a2ff13606d5ba2cc081b6454a1e322a3c284ff9876bde609e8",
+      "bytes": 22491
+    },
+    {
+      "source": "backend/app/tool_routing_contract.py",
+      "delivery": "03_核心代码/backend/app/tool_routing_contract.py",
+      "sha256": "7dbb50b39983a7c8dc90b60bb962197c1b3b7eeaa241d1313a2ce2693c93d1e0",
+      "bytes": 6024
+    },
+    {
+      "source": "evals/claim_atomic_contract.py",
+      "delivery": "03_核心代码/evals/claim_atomic_contract.py",
+      "sha256": "ec3d3232d208a1ee36026994be778ac3f9f213c5eb84b2d8c0435d89ae91eae5",
+      "bytes": 2028
+    },
+    {
+      "source": "evals/datasets/annotation_guidelines.md",
+      "delivery": "03_核心代码/evals/datasets/annotation_guidelines.md",
+      "sha256": "24c76fbbcf539c1fde2c1c3c82a86be2e8ce73882c738618c6774493ff774444",
+      "bytes": 6090
+    },
+    {
+      "source": "evals/datasets/build_industry_bench_100.py",
+      "delivery": "03_核心代码/evals/datasets/build_industry_bench_100.py",
+      "sha256": "c84fd517ae8a2ddc038c6bc991b8e90f34c25eba2a8c4d35702bfcf9cd7929a7",
+      "bytes": 14260
+    },
+    {
+      "source": "evals/datasets/industry_bench_100.schema.json",
+      "delivery": "03_核心代码/evals/datasets/industry_bench_100.schema.json",
+      "sha256": "c1e5868e1c10feda09fdf184f84c765d140d1ca0a4028d9e0be57ae93c52dcc8",
+      "bytes": 3155
+    },
+    {
+      "source": "evals/freeze_claim_atomic_decomposition.py",
+      "delivery": "03_核心代码/evals/freeze_claim_atomic_decomposition.py",
+      "sha256": "4fc93c7199d6ed4e8b95d6bc934a7e1b0bd7f0074d4b9094d66fcafd51c30416",
+      "bytes": 6288
+    },
+    {
+      "source": "evals/metrics/__init__.py",
+      "delivery": "03_核心代码/evals/metrics/__init__.py",
+      "sha256": "907146baeb44c192a6386f41ece2b8fbfed1f7bdf80e57d4437fe1ea3fc1ff81",
+      "bytes": 1378
+    },
+    {
+      "source": "evals/metrics/_common.py",
+      "delivery": "03_核心代码/evals/metrics/_common.py",
+      "sha256": "ff8674e8766c110bc979ed0d9e3d5b79c3527cf4e276c2dae3c3a52974e867f1",
+      "bytes": 3214
+    },
+    {
+      "source": "evals/metrics/behavior.py",
+      "delivery": "03_核心代码/evals/metrics/behavior.py",
+      "sha256": "660f7b5d0b67e1df54eb0f506bb34ff78a25071e2b5f7a018ecd66df4dbb3784",
+      "bytes": 8096
+    },
+    {
+      "source": "evals/metrics/citation.py",
+      "delivery": "03_核心代码/evals/metrics/citation.py",
+      "sha256": "d760e1ef1c6fddbf59f7707b44faf90a75ba24f8ce575c30dc8765fb221f2e9b",
+      "bytes": 1960
+    },
+    {
+      "source": "evals/metrics/retrieval.py",
+      "delivery": "03_核心代码/evals/metrics/retrieval.py",
+      "sha256": "9c2f99ad36ee9066f0b36b4ca5ddff7a6a8306b43b220e036b4c8667986a2155",
+      "bytes": 1821
+    },
+    {
+      "source": "evals/metrics/statistics.py",
+      "delivery": "03_核心代码/evals/metrics/statistics.py",
+      "sha256": "21ef1635e688804d9f92ec9f5b1be25ff5702ec7028232722ee8a1f03c54ba43",
+      "bytes": 3135
+    },
+    {
+      "source": "evals/model_claim_verifier_bench.py",
+      "delivery": "03_核心代码/evals/model_claim_verifier_bench.py",
+      "sha256": "031a1a062975a69e533554a525ef92ecb0f6996cb9f82dca9e53e7fc8aff16c3",
+      "bytes": 17766
+    },
+    {
+      "source": "evals/model_field_claim_verifier_bench.py",
+      "delivery": "03_核心代码/evals/model_field_claim_verifier_bench.py",
+      "sha256": "936ea9798723a866de91c5c6806ac7a4308218a48f5e5e456b4487fca49b11dd",
+      "bytes": 25587
+    },
+    {
+      "source": "evals/toolbench_run.py",
+      "delivery": "03_核心代码/evals/toolbench_run.py",
+      "sha256": "72b5292d6762ca79437c3c5b573a34af6ebc9da8ab056661e35adcc10beef037",
+      "bytes": 14785
+    },
+    {
+      "source": "frontend/src/components/markdown/sanitize.test.ts",
+      "delivery": "03_核心代码/frontend/src/components/markdown/sanitize.test.ts",
+      "sha256": "d52bcc77c91399415995ca31f9a7c7d3444a1ed9c60468c85bc01d1f7dc3a348",
+      "bytes": 1302
+    },
+    {
+      "source": "frontend/src/components/markdown/sanitize.ts",
+      "delivery": "03_核心代码/frontend/src/components/markdown/sanitize.ts",
+      "sha256": "9d2c46bd29862e0267d3ca774e9cfd973ec240229dd2649220004442dfb9df73",
+      "bytes": 1438
+    },
+    {
+      "source": "frontend/src/components/markdown/xss-corpus.ts",
+      "delivery": "03_核心代码/frontend/src/components/markdown/xss-corpus.ts",
+      "sha256": "4d0e4f9975961d2f43d0d144aa4e4d42abeda3119cfe928e686b44e1f0037f76",
+      "bytes": 2430
+    },
+    {
+      "source": "frontend/src/pages/chat/component/research-detail/search-results.module.scss",
+      "delivery": "03_核心代码/frontend/src/pages/chat/component/research-detail/search-results.module.scss",
+      "sha256": "6a5b8014811050da48de38485ad30418bc75516b7da0684656c80ca43f2487d4",
+      "bytes": 2376
+    },
+    {
+      "source": "frontend/src/pages/chat/component/research-detail/search-results.tsx",
+      "delivery": "03_核心代码/frontend/src/pages/chat/component/research-detail/search-results.tsx",
+      "sha256": "078b42370146e2dfcab48a41a14be5828e93185c54106bfd245ea2e7fb0f22ed",
+      "bytes": 2469
+    },
+    {
+      "source": "tests/test_eval_metrics.py",
+      "delivery": "03_核心代码/tests/test_eval_metrics.py",
+      "sha256": "35786ba9184d4002e66a3de226398798aeb2aeb64315bfc2f0377183ac850f51",
+      "bytes": 5729
+    },
+    {
+      "source": "tests/test_eval_toolbench.py",
+      "delivery": "03_核心代码/tests/test_eval_toolbench.py",
+      "sha256": "4c2f98ef4eec0cf3401fcd9bb312e1912ebc2ff54c6836554cc274ca4542ec58",
+      "bytes": 3511
+    }
+  ],
+  "changes": "Core source files are byte-identical to the reviewed project."
+}

@@ -1,0 +1,158 @@
+{
+  "$defs": {
+    "support": {
+      "additionalProperties": false,
+      "properties": {
+        "chunk_id": {
+          "pattern": "^ibv1:[a-z0-9_]+:p[0-9]{3}:s[0-9]{2}$",
+          "type": "string"
+        },
+        "document_id": {
+          "pattern": "^[a-z0-9_]+$",
+          "type": "string"
+        },
+        "page": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "source_path": {
+          "pattern": "^data/.+\\.pdf$",
+          "type": "string"
+        },
+        "support_text": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_id",
+        "source_path",
+        "sha256",
+        "page",
+        "chunk_id",
+        "support_text"
+      ],
+      "type": "object"
+    },
+    "tool": {
+      "enum": [
+        "local_retrieval",
+        "calculator"
+      ],
+      "type": "string"
+    }
+  },
+  "$id": "industry_bench_v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "else": {
+        "properties": {
+          "answerable": {
+            "const": true
+          },
+          "support": {
+            "minItems": 1
+          }
+        }
+      },
+      "if": {
+        "properties": {
+          "category": {
+            "const": "unanswerable"
+          }
+        },
+        "required": [
+          "category"
+        ]
+      },
+      "then": {
+        "properties": {
+          "answerable": {
+            "const": false
+          },
+          "support": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "allowed_tools": {
+      "items": {
+        "$ref": "#/$defs/tool"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "answerable": {
+      "type": "boolean"
+    },
+    "case_id": {
+      "description": "Runner-compatible alias of id; deterministic tests require equality.",
+      "pattern": "^IBV1-[0-9]{3}$",
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "single_document_fact",
+        "same_document_multi_hop",
+        "cross_document_comparison",
+        "unanswerable"
+      ],
+      "type": "string"
+    },
+    "gold_claims": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "id": {
+      "pattern": "^IBV1-[0-9]{3}$",
+      "type": "string"
+    },
+    "query": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "required_tools": {
+      "items": {
+        "$ref": "#/$defs/tool"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "support": {
+      "items": {
+        "$ref": "#/$defs/support"
+      },
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "id",
+    "case_id",
+    "category",
+    "query",
+    "gold_claims",
+    "answerable",
+    "allowed_tools",
+    "required_tools",
+    "support"
+  ],
+  "title": "IndustryBench v1 case",
+  "type": "object"
+}

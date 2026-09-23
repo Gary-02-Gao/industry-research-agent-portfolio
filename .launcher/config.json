@@ -1,0 +1,8 @@
+{
+  "mode": "portfolio",
+  "port": 18092,
+  "modules": [
+    "jsonschema",
+    "pypdf"
+  ]
+}

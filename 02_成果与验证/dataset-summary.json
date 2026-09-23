@@ -1,0 +1,40 @@
+{
+  "source_sha256": "fb53748e0a1357df92e7c16b8606e1aa9b6155a817ea1dac4ebb256275e596b2",
+  "case_count": 100,
+  "category_counts": {
+    "single_document_fact": 40,
+    "same_document_multi_hop": 30,
+    "cross_document_comparison": 20,
+    "unanswerable": 10
+  },
+  "splits": {
+    "dev": {
+      "count": 40,
+      "category_counts": {
+        "single_document_fact": 16,
+        "same_document_multi_hop": 12,
+        "cross_document_comparison": 8,
+        "unanswerable": 4
+      }
+    },
+    "test": {
+      "count": 30,
+      "category_counts": {
+        "single_document_fact": 12,
+        "same_document_multi_hop": 9,
+        "cross_document_comparison": 6,
+        "unanswerable": 3
+      }
+    },
+    "validation": {
+      "count": 30,
+      "category_counts": {
+        "single_document_fact": 12,
+        "same_document_multi_hop": 9,
+        "cross_document_comparison": 6,
+        "unanswerable": 3
+      }
+    }
+  },
+  "scope": "Counts only; no benchmark questions, source documents or sealed holdout are distributed."
+}

@@ -1,0 +1,72 @@
+{
+  "artifact_type": "application_portfolio_evidence_summary",
+  "purpose": "Recruiting presentation; allowlisted summaries, not complete raw runs",
+  "retrieval": {
+    "source_path": "evals/runs/project_v1_1_hybrid_coverage/E2_REPORT.md",
+    "sha256": "d380eb4dd05584e615559210706d228f9b26435a4f1f2f65b584bf171528d056",
+    "scope": "20-case frozen slice; retrieval metrics on 18 answerable cases",
+    "evaluator": "offline-v2/multispan-coverage",
+    "recall_at_10": {
+      "baseline": 0.606,
+      "candidate": 0.986
+    },
+    "precision_at_1": {
+      "baseline": 0.389,
+      "candidate": 0.722
+    },
+    "paired_run_wall_reduction_percent": 20.7
+  },
+  "routing": {
+    "source_path": "evals/runs/e3_toolbench_v1_h800/run-v6-shared-production-policy.json",
+    "sha256": "83199ecfb761244bc3a9cdc0c36605a7c80f2ef827b15a9569df3179b55c0c35",
+    "dataset_sha256": "4efb8473648b0c9efefdcbe71d14a9ba61f57eeb2ad12e76d4095241dca31e38",
+    "metrics": {
+      "case_count": 200,
+      "tool_selection_accuracy": 0.965,
+      "schema_valid_rate": 1.0,
+      "wall_time_ms": 8885.351
+    },
+    "serial_control": {
+      "source_path": "evals/runs/e3_toolbench_v1_h800/run-v6-serial-control.json",
+      "sha256": "7be04ef7ac90db6e19d1e2f5cc28fbc9c47fd40f0ffff6d5062a803ed9e73f2d",
+      "wall_time_ms": 89088.53
+    },
+    "scope": "Same model and dataset; batch wall time, not single-request latency"
+  },
+  "handlers": {
+    "source_path": "evals/runs/e3_toolbench_v1_h800/handlerbench-v3-spans.json",
+    "sha256": "082bbffa9dd6f594d9863a7e643d5b55ad4d7cee241f72dd391552094348231f",
+    "case_count": 45,
+    "end_to_end_success_rate": 1.0,
+    "scope": "Fixed 45-case configured-handler subset; no latency claim derived from this run"
+  },
+  "industry_benchmark": {
+    "source_path": "evals/datasets/industry_bench_100.manifest.json",
+    "sha256": "5245433b4bfa67fd1754a69d87c9643bdadbcd491eb92907a7248f307be99054",
+    "case_count": 100,
+    "task_counts": {
+      "single_document": 40,
+      "same_document_multihop": 30,
+      "cross_document_comparison": 20,
+      "unanswerable": 10
+    },
+    "scope": "Benchmark construction, not semantic approval of every answer"
+  },
+  "atomic_decomposition": {
+    "source_path": "evals/datasets/e2_claim_verifier/development.atomic-decomposition-v1.manifest.json",
+    "sha256": "34bdbe3f866be029ed58907dd1abef16956174aed612f06b680e2cb265d8b95f",
+    "record_count": 200,
+    "atomic_count": 646,
+    "output_sha256": "9e3f2a4970909720abf285f6007174086f1aead44b2f2bbaf9bf730cdeb71808",
+    "schema_version": "1.0",
+    "scope": "Reviewed frozen input; not a semantic model quality pass"
+  },
+  "demo": {
+    "file": "01_项目演示/项目演示_60秒_静音字幕版.mp4",
+    "sha256": "282df5dbfc61f88c25f27c36bb9095ca3cc1a25e48929d78abde983e936e8502",
+    "mode": "Archived experiment replay; not live inference",
+    "duration_seconds": 60.02,
+    "resolution": "1920x1080",
+    "fps": 30
+  }
+}

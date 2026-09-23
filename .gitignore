@@ -1,0 +1,17 @@
+
+# Local runtime created for double-click launch
+.venv/
+.runtime/
+__pycache__/
+*.pyc
+
+# Local secrets, caches and editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+*.log

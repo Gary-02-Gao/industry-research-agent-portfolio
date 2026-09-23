@@ -1,0 +1,79 @@
+% 编译：tectonic --outdir .. 项目介绍.tex（在本目录执行）
+% 或使用 XeLaTeX；Overleaf 请选择 XeLaTeX。
+\documentclass[UTF8,a4paper,fontset=none,10pt]{ctexart}
+\usepackage[top=14mm,bottom=14mm,left=16mm,right=16mm]{geometry}
+\usepackage{fontspec,xcolor,enumitem,tabularx,hyperref}
+% macOS 使用系统宋体 Songti SC；其他环境需安装 SimSun 和 Times New Roman。
+% 字体不随源文件分发。Overleaf 上传有许可的字体后可按文件名设置。
+\IfFileExists{/System/Library/Fonts/Supplemental/Songti.ttc}{
+  \setCJKmainfont{Songti.ttc}[Path=/System/Library/Fonts/Supplemental/,FontIndex=6,BoldFont=Songti.ttc,BoldFeatures={FontIndex=1}]
+}{
+  \setCJKmainfont{SimSun}[AutoFakeBold=1.5]
+}
+\IfFileExists{/System/Library/Fonts/Supplemental/Times New Roman.ttf}{
+  \setmainfont{Times New Roman.ttf}[Path=/System/Library/Fonts/Supplemental/,BoldFont=Times New Roman Bold.ttf,ItalicFont=Times New Roman Italic.ttf,BoldItalicFont=Times New Roman Bold Italic.ttf]
+}{
+  \setmainfont{Times New Roman}
+}
+\definecolor{accent}{HTML}{173C52}
+\definecolor{muted}{HTML}{505A63}
+\hypersetup{hidelinks,pdfauthor={高士奇},pdftitle={行业信息研究智能体 - 项目作品集}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlist[itemize]{leftmargin=1.2em,label=\textbullet,itemsep=2.2pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+\newcommand{\cvsection}[1]{\par\vspace{8pt}{\large\bfseries\color{accent}#1}\par\vspace{2pt}{\color{accent}\hrule height 0.6pt}\vspace{5pt}}
+\newcommand{\entry}[2]{\begin{tabularx}{\linewidth}{@{}Xr@{}}\textbf{#1}&{\small\color{muted}#2}\end{tabularx}\par}
+\newcommand{\tech}[1]{{\small\color{muted}#1}\par}
+\begin{document}
+\linespread{1.03}\selectfont\fontsize{10.5}{15}\selectfont
+{\small\color{muted}PROJECT PORTFOLIO / DATA \& EVALUATION\hfill 高士奇}\par
+\vspace{12pt}
+{\fontsize{24}{30}\selectfont\bfseries\color{accent}行业信息研究智能体}\par
+\vspace{5pt}
+{\large 数据集建设\quad /\quad 质量校验\quad /\quad 可复现评测}\par
+\vspace{8pt}
+面向行业报告与企业资料的可追溯问答系统，将数据规范、证据来源、检索策略与工具执行连接为可验证的工程流程。
+
+\cvsection{代表性成果}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{@{}p{.31\linewidth}p{.34\linewidth}X@{}}
+{\Large\bfseries 100 题}&{\Large\bfseries 98.6\%}&{\Large\bfseries 96.5\%}\\
+IndustryBench-100&最终检索 Recall@10&工具选择准确率\\
+{\small 四类任务；分层划分}&{\small 20 题切片 / 18 道可回答}&{\small ToolBench-200 / 193 正确}
+\end{tabularx}
+
+\cvsection{核心工作：从数据到实验}
+\textbf{01\quad 数据规范与版本管理}
+\begin{itemize}
+\item 构建 IndustryBench-100，包含 40 道事实题、30 道同文档多跳题、20 道跨文档题及 10 道不可回答题；开发、验证与测试集分别为 40、30、30 题。
+\item 维护 Schema、数据哈希和类别配额；记录来源文件、物理页码与证据片段，使数据版本和问题来源可追踪。
+\end{itemize}
+\vspace{4pt}
+\textbf{02\quad 证据质量与对照评测}
+\begin{itemize}
+\item 自动检查字段结构、划分完整性、原文证据定位及重复片段一致性；将表格抽取中的表头、年份与数值关联问题保留为可审阅的修复规则。
+\item 实现文档范围路由：已知报告优先词法检索，范围未知时融合向量与词法排序。在固定切片上，Recall@10 从 60.6\% 提升至 98.6\%，Precision@1 从 38.9\% 提升至 72.2\%。
+\end{itemize}
+\vspace{4pt}
+\textbf{03\quad 共享工具协议与执行验证}
+\begin{itemize}
+\item 运行时与评测共享工具选择策略，分别验收工具选择、参数结构和执行结果；ToolBench-200 选择正确 193/200，Schema 合法 200/200。
+\item 同模型、同数据的 200 个路由请求，串行与 16 并发的批处理总耗时为 89.1 秒与 8.9 秒。通过有界并发提升同批请求的处理效率。
+\end{itemize}
+
+\cvsection{系统实现与交付成果}
+\textbf{研究工作台：}基于 React 与 FastAPI 展示问题输入、研究步骤、回答结果与来源证据，支持展开报告片段并核对关键事实。\par
+\vspace{4pt}
+\textbf{评测与验证：}提供逐题检索统计、工具路由评分和数据配额摘要；核验脚本支持文件哈希检查与统计复算，精选实现包含 16 项通过的离线测试。\par
+\vspace{4pt}
+\textbf{作品集材料：}一分钟产品流程演示、界面截图、数据工程导读与 26 份精选实现和测试文件。
+
+\cvsection{后续研究方向}
+完善字段级证据标注、按来源分组的数据划分和困难样本覆盖，结合独立评测分析数据选择与标注质量对模型表现的影响；进一步优化跨文档证据分配与并发调度。
+\par\vspace{9pt}
+{\small\color{muted}实验设置：检索结果来自固定 20 题切片的 18 道可回答题；工具路由使用内部 ToolBench-200。演示为真实前端与归档实验结果回放。}
+\vfill
+{\small\color{muted}Python / FastAPI / React / Milvus / 工具路由 / 数据与评测工程}
+\end{document}
